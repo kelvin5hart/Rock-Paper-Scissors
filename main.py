@@ -33,7 +33,10 @@ player = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Sc
 computer = random.randint(0, 2)
 choice = [rock, paper, scissors]
 
-print(f"You chose:\n {choice[player]}")
+if player < 3:
+  print(f"You chose:\n {choice[player]}")
+else:
+  print("You entered an invalid reponse")
 print(f"computer chose:\n {choice[computer]}")
 
 if computer == player:
@@ -42,5 +45,7 @@ elif (computer == 0 and player == 2) or (computer == 1 and player == 0) or (comp
   print("Computer Wins, You loose!")
 elif (player == 0 and computer == 2) or (player == 1 and computer == 0) or (player == 2 and computer == 1):
   print("You Won!")
+else:
+  print("You loose!")
 
 
