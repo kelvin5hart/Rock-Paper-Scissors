@@ -31,22 +31,10 @@ scissors = '''
 
 player = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. \n"))
 computer = random.randint(0, 2)
+choice = [rock, paper, scissors]
 
-if player == 0:
-  print(f"You chose rock\n {rock}")
-elif player == 1:
-  print(f"You chose paper\n {paper}")
-elif player == 2:
-  print(f"You chose scissors\n {scissors}")
-else:
-  print("You chose a wrong value")
-
-if computer == 0:
-  print(f"computer chose rock\n {rock}")
-elif computer == 1:
-  print(f"computer chose paper\n {paper}")
-elif computer == 2:
-  print(f"computer chose scissors\n {scissors}")
+print(f"You chose:\n {choice[player]}")
+print(f"computer chose:\n {choice[computer]}")
 
 if computer == player:
   print("Draw")
